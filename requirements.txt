@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+qwhale_client
+python-dotenv
+redis
