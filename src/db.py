@@ -14,7 +14,7 @@ class DB:
         return DB._instance
 
     def __init__(self):
-        self.redis = redis.Redis(host='localhost', port=6379, db="links")
+        self.redis = redis.Redis(host='localhost', port=6379, db=0)
         load_dotenv(".env")
         token = os.getenv("QWHALE_TOKEN")
         self.client = APIClient(token)
