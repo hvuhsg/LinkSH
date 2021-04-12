@@ -42,3 +42,4 @@ class DB:
 
     def close(self):
         self.client.close()
+        self.redis.close()
