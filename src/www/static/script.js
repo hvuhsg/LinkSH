@@ -1,5 +1,5 @@
 var DOMAIN = "qlinks.tk"
-var PORT = "80"
+var PORT = ""
 var URLSCHEMA = "https"
 
 
