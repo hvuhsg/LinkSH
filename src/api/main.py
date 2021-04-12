@@ -1,7 +1,7 @@
 from secrets import token_urlsafe
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import RedirectResponse
-from pydantic import AnyHttpUrl
+from pydantic import AnyUrl
 
 from db import DB
 
@@ -9,7 +9,7 @@ api_router = APIRouter()
 
 
 @api_router.post("/link")
-def new_link(long_link: AnyHttpUrl):
+def new_link(long_link: AnyUrl):
     db = DB.get_instance()
     length = 50
     while True:
