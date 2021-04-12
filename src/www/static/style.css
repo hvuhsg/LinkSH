@@ -100,7 +100,7 @@ main .box {
 
 
 
-.modal-link-blur {
+.modal-link-blur, .modal-link-blur-err  {
     position: fixed;
 
     height: 100vh;
@@ -116,7 +116,7 @@ main .box {
 }
 
 
-.modal-link {
+.modal-link, .modal-link-err {
     position: relative;
     text-align: center;
     width: 50vh;
@@ -127,13 +127,13 @@ main .box {
 }
 
 
-.modal-link-close {
+.modal-link-close, .modal-link-close-err  {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.modal-link-close:hover {
+.modal-link-close:hover, .modal-link-err:hover {
     cursor: pointer;
 }
 

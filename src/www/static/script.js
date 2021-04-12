@@ -4,14 +4,14 @@ var URLSCHEMA = "https"
 
 
 var modalLinkBlur = document.querySelector(".modal-link-blur")
+var modalLinkBlurErr = document.querySelector(".modal-link-blur-err")
 var modalLink = document.querySelector(".modal-link")
 var modalLInkP = document.querySelector(".modal-link p")
 var modalLinkBlurClose = document.querySelector(".modal-link-close")
+var modalLinkBlurCloseErr = document.querySelector(".modal-link-close-err")
 var urlInput = document.querySelector(".inner-box input")
 var shortItBtn = document.querySelector(".shorten-btn")
 var copyBtn = document.querySelector(".copy-btn")
-
-
 
 copyBtn.addEventListener("click", () => {
     console.log("click")
@@ -35,6 +35,7 @@ shortItBtn.addEventListener("click", () => {
     .then(res => {
         if (!res.ok) {
             console.log("error")
+            modalLinkBlurErr.style.display = "flex"
         } else {
             res.json()
             .then(json => {
@@ -51,4 +52,10 @@ shortItBtn.addEventListener("click", () => {
 modalLinkBlurClose.addEventListener("click", () => {
     console.log("click")
     modalLinkBlur.style.display = "none"
+})
+
+
+modalLinkBlurCloseErr.addEventListener("click", () => {
+    console.log("click")
+    modalLinkBlurErr.style.display = "none"
 })
