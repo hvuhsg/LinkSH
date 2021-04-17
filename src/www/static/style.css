@@ -23,8 +23,9 @@ ul {
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0.5vw;
     font-size: 3em;
+
 }
 
 
@@ -41,8 +42,8 @@ main .box {
     position: relative;
     padding: 20px;
     width: 35vw;
-    height: 300px;
     border-radius: 20px;
+    box-shadow: 2px 2px 20px;
 }
 
 .box .top-img {
@@ -67,9 +68,6 @@ main .box {
     height: 100%;
 }
 
-.shorten-btn {
-    margin-top: auto;
-}
 
 
 .inner-box input {
@@ -83,12 +81,20 @@ main .box {
 
 
 .shorten-btn {
-    margin-top: 10px;
     border: 1px solid white;
     padding: 10px 20px;
-    background-color: black;
+    background-color: #5f8efd;
     border-radius: 10px;
     font-size: 2em;
+
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px;
+    transition: 1s ease box-shadow;
+}
+
+.shorten-btn:hover {
+    box-shadow: 2px 2px 20px;
+    transition: 1s ease box-shadow;
 }
 
 .shorten-btn:hover {
