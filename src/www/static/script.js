@@ -24,6 +24,12 @@ copyBtn.addEventListener("click", () => {
     document.body.removeChild(elem);
     copyBtn.innerHTML = "Copied!"
     copyBtn.style.border = "2px solid limegreen"
+
+    setTimeout(() => {
+        copyBtn.style.border = "2px solid red"
+        copyBtn.innerHTML = "Copy"
+    }, 1000)
+    
 })
 
 
@@ -52,6 +58,7 @@ shortItBtn.addEventListener("click", () => {
 modalLinkBlurClose.addEventListener("click", () => {
     console.log("click")
     modalLinkBlur.style.display = "none"
+
 })
 
 
