@@ -1,0 +1,14 @@
+@media screen and (max-width: 1024px) {
+    .app h1 {
+        font-size: 2rem;
+    }
+
+    .app input {
+        margin-top: 10%;
+        width: 70%;
+    }
+
+    .app button {
+        font-size: 1.5rem;
+    }
+}

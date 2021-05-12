@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-purple: #5065F6;
+    --primary-green: #AAE3C0;
+}
+
+
+header {
+    padding-top: 3vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    color: var(--primary-purple);
+    
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+    background: var(--primary-purple);
+    height: 60vh;
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: medium;
+    text-align: center;
+    width: 30%;
+    padding-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 3rem;
+}
+
+.app input {
+    margin-top: 6%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    font-size: 1.7rem;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+}
+
+.app input {
+    outline: none;
+}
+
+.app input:focus, .app input:hover {
+    box-shadow: 0 0 5px 0px;
+}
+
+.app button {
+    margin-top: 2%;
+    background-color: var(--primary-green);
+    width: 20%; height: 10%;
+    border-radius: 40px;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 250ms transform ease;
+}
+
+.app button:hover {
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+
+
+
+
+/* Hide elements */
+.modal-container.error {
+    display: none;
+}
+
+.modal-container.success {
+    display: none;
+}
+
+
+
+
+
+
+
+/* Modal error */
+
+.modal-container {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-error, .modal-success {
+    transform: scale(0);
+    opacity: 0;
+    animation: fade-in 500ms forwards ease;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+.modal-error {
+    width: 48vw; height: 60vh;
+    background: #ffffff;
+    position: relative;
+    border-radius: 40px;
+}
+
+.modal-error h1 {
+    padding-top: 4%;
+    color: red;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.modal-error p {
+    text-align: center;
+    padding-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.5rem;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.close-btn::after {
+    content: '\00d7';
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 2rem;
+}
+
+
+
+/* Modal success */
+.modal-success {
+    width: 48vw; height: 60vh;
+    background: #ffffff;
+    position: relative;
+    border-radius: 40px;
+}
+
+
+.modal-success h1 {
+    padding-top: 4%;
+    color: var(--primary-green);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+}
+
+.modal-success p {
+    text-align: center;
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.5rem;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.close-btn::after {
+    content: '\00d7';
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 2rem;
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.copy-btn {
+    background: var(--primary-purple);
+    color: #FFFFFF;
+    margin-top: 5%;
+    font-size: 1.8rem;
+    padding: 15px 14px;
+    font-weight: bold;
+    border-radius: 40px;
+    border: none;
+}
+
+.copy-btn:hover {
+    cursor: pointer;
+}

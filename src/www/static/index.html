@@ -4,50 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinksSH</title>
-    <link rel="stylesheet" href="/static/style.css">
-
+    <title>LinkSH 🚀</title>
+    <link rel="stylesheet" href="/static/style-desktop.css">
+    <link rel="stylesheet" href="/static/style-mobile.css">
+    <link rel="stylesheet" href="/static/style-tablet.css">
 </head>
 <body>
-    <div class="modal-link-blur-err">
-        <div class="modal-link-err">
-            <div class="modal-link-close-err">X</div>
-            <h1>Error!</h1>
-            <p>The url is invalid.<br>Example url: <br>https://example.com<br>Note:<br>You must add <br>http:// or https:// in the beginning</p>
-        </div>
-    </div>
-
-    <div class="modal-link-blur">
-        <div class="modal-link">
-            <div class="modal-link-close">X</div>
-            <h1>Your link is:</h1>
-            <p> </p>
-            <div class="copy-btn">Copy</div>
-        </div>
-    </div>
     <header>
-        <ul>
-            <li>Linksh</li>
-        </ul>
+        <h1>LinkSH</h1>
+        <img src="header.svg" alt="">
     </header>
-    <main>
-        <div class="box">
-            <div class="top-img">
-                <!-- <img src="//unsplash.it/100/100" alt=""> -->
-            </div>
-            <div class="inner-box">
-                <h1>Link url shortner</h1>
-                <input type="text" placeholder="URL">
-                <div class="shorten-btn">Short it!</div>
+
+    <div class="app">
+        <h1>URL Link shortener</h1>
+        <input type="text" placeholder="https://example.com">
+        <button>Short it!</button>
+    </div>
+
+    <div class="modal-container error">
+        <div class="modal-error">
+            <h1>Error</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, totam?</p>
+            <div class="close-btn"></div>
+        </div>
+    </div>
+    <div class="modal-container success">
+        <div class="modal-success">
+            <div class="close-btn"></div>
+            <h1>Your shortened link is ready</h1>
+            <p>https://shortenedLink.com</p>
+            <div class="flex-center">
+                <button class="copy-btn">Copy to clipboard</button>
             </div>
         </div>
-    </main>
-
-    <footer>
-
-    </footer>
-
-
-    <script src="/static/script.js"></script>
+    </div>
+    <script src="/static/app.js"></script>
 </body>
 </html>

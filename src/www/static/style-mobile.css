@@ -1,0 +1,84 @@
+@media screen and (max-width: 600px) {
+    header {
+        padding-bottom: 1vh;
+    }
+
+
+    .app {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .app h1 {
+        font-size: 2rem;
+        padding-bottom: 4%;
+        text-align: center;
+        width: 50%;
+    }
+
+    .app input {
+        margin-top: 2%;
+        width: 85%;
+        font-size: 1.4rem;
+    }
+
+    .app button {
+        margin-top: 1.5vh;
+        width: 40%;
+        height: 9%;
+        position: relative;
+        font-size: 1.2rem;
+        width: 40%;
+        height: 10%;
+    }
+
+
+    .app button:hover {
+        transform: none;
+    }
+
+    .app button:active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+    }
+
+    .modal-container .modal-success {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .modal-success h1 {
+        font-size: 1.5rem;
+        margin-top: 5%;
+    }
+
+    .modal-success p {
+        font-size: 1rem;
+    }
+
+    .modal-success .copy-btn {
+        font-size: 1.2rem;
+    }
+
+    .modal-container .modal-error {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .modal-error h1 { 
+        font-size: 2rem;
+    }
+}
+
+
+@media screen and (max-height: 350px) {
+    .app button {
+        height: 15%;
+    }
+}
