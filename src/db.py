@@ -31,12 +31,10 @@ class DB:
     def get_link(self, short_link: str):
         redis_value = self.redis.get(short_link)
         if redis_value is not None:
-            self.redis.set(short_link, redis_value.decode())
             return redis_value.decode()
         mongo_value = self.links.find_one({"short_link": short_link})
         if mongo_value is not None:
             mongo_value = mongo_value["long_link"]
-        if mongo_value is not None:
             self.redis.set(short_link, mongo_value)
         return mongo_value
 
